@@ -107,32 +107,7 @@ check.ImageRectSize = Vector2.new(24, 24)
 
 -- Scripts:
 
-local function HJLZ_fake_script() -- Frame.DragScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local Mouse 		= game.Players.LocalPlayer:GetMouse() 	-- get the player's mouse
-	local UIS			= game:GetService("UserInputService") 	-- Get the service
-	local Frame 		= script.Parent 						-- The Frame to be dragged
-	local Trigger 		= script.Parent.Hint 					-- Long press this label to drag
-	local MouseButton 	= Enum.UserInputType.MouseButton2 		-- The desired mouse button (1 = left,2 = right,3 = middle)
-	
-	-- DO NOT change the lines below
-	
-	Trigger.InputBegan:Connect(function(input)
-		 if input.UserInputType == MouseButton then
-	  		local lastMousePos = Vector2.new(Mouse.X,Mouse.Y)
-	  		while UIS:IsMouseButtonPressed(MouseButton) do
-	   			local delta = Vector2.new(Mouse.X,Mouse.Y) - lastMousePos
-	   			Frame.Position = Frame.Position + UDim2.new(0,delta.X,0,delta.Y)
-	   			lastMousePos = Vector2.new(Mouse.X,Mouse.Y)
-	  		 	wait()
-	 		end
-	 	end
-	end)
-	
-end
-coroutine.wrap(HJLZ_fake_script)()
-local function NVAF_fake_script() -- save.LocalScript 
+local function ONZVNSV_fake_script() -- save.LocalScript 
 	local script = Instance.new('LocalScript', save)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -140,8 +115,8 @@ local function NVAF_fake_script() -- save.LocalScript
 	end)
 	
 end
-coroutine.wrap(NVAF_fake_script)()
-local function ADBQR_fake_script() -- upload.LocalScript 
+coroutine.wrap(ONZVNSV_fake_script)()
+local function HWNHO_fake_script() -- upload.LocalScript 
 	local script = Instance.new('LocalScript', upload)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -149,8 +124,8 @@ local function ADBQR_fake_script() -- upload.LocalScript
 	end)
 	
 end
-coroutine.wrap(ADBQR_fake_script)()
-local function OPSR_fake_script() -- clear.LocalScript 
+coroutine.wrap(HWNHO_fake_script)()
+local function RNYLCK_fake_script() -- clear.LocalScript 
 	local script = Instance.new('LocalScript', clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -158,8 +133,8 @@ local function OPSR_fake_script() -- clear.LocalScript
 	end)
 	
 end
-coroutine.wrap(OPSR_fake_script)()
-local function OWCTPX_fake_script() -- check.LocalScript 
+coroutine.wrap(RNYLCK_fake_script)()
+local function SWSNPR_fake_script() -- check.LocalScript 
 	local script = Instance.new('LocalScript', check)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -168,4 +143,4 @@ local function OWCTPX_fake_script() -- check.LocalScript
 	end)
 	
 end
-coroutine.wrap(OWCTPX_fake_script)()
+coroutine.wrap(SWSNPR_fake_script)()
